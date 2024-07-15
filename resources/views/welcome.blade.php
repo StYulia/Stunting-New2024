@@ -7,10 +7,10 @@
 
     <!-- About Section -->
     
-    @include('layouts.landing.about')
+    {{-- @include('layouts.landing.about') --}}
 
     <!-- Stats Section -->
-    @include('layouts.landing.stat')
+    {{-- @include('layouts.landing.stat') --}}
     
 
     <!-- Services Section -->

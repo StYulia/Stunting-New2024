@@ -1,4 +1,4 @@
-<section id="about" class="about section">
+{{-- <section id="about" class="about section">
 
     <div class="container">
 
@@ -43,4 +43,4 @@
 
     </div>
 
-</section><!-- /About Section -->
+</section><!-- /About Section --> --}}

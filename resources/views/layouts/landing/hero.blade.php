@@ -1,6 +1,6 @@
 <section id="hero" class="hero section light-background">
 
-    <img src="{{ asset('landing/') }}/assets/img/hero-bg.jpg" alt="Gambar Latar Belakang" data-aos="fade-in">
+    <img src="{{ asset('landing/') }}/assets/img/backdrop.jpg" alt="Gambar Latar Belakang" data-aos="fade-in">
 
     <div class="container position-relative">
 

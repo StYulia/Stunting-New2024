@@ -11,7 +11,7 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="{{ route('home') }}" class="{{ Request::routeIs('home') ? 'active' : '' }}">Home</a></li>
-                    <li><a href="/#about" class="{{ Request::is('#about') ? 'active' : '' }}">About</a></li>
+                    {{-- <li><a href="/#about" class="{{ Request::is('#about') ? 'active' : '' }}">About</a></li> --}}
                     <li><a href="/#services" class="{{ Request::is('#services') ? 'active' : '' }}">Layanan</a></li>
                     <li><a href="/#appointment" class="{{ Request::is('#appointment') ? 'active' : '' }}">Tambah Data Anak</a></li>
                     @auth
