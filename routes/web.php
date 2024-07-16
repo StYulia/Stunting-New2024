@@ -33,7 +33,9 @@ Route::middleware(['auth'])->group(function(){
     Route::get("periksa/{id}" , [CfController::class , "konsultasi"])->name('periksa.anak');
     Route::post("periksa/{id}" , [CfController::class , "calculateCF"])->name('calculate.cf');
     Route::post('/cf/confirm', [CfController::class , "confirmCf"])->name('cf.confirm');
-
+    Route::get("/anak/edit/{id}" , [AnakController::class , "edit"])->name('anak.edit');
+    Route::put("/anak/edit/{id}" , [AnakController::class , "update"])->name('anak.update');
+    Route::get("/anak/delete/{id}" , [AnakController::class , "destroy"])->name('anak.destroy');
 });
 
 

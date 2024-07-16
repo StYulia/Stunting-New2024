@@ -57,7 +57,7 @@
   </footer>
 
   <!-- Chatbot Button -->
-  <button  type="button" class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#chatbotModal" style="position: fixed; bottom: 20px; left: 20px;z-index: 9999">
+  <button  type="button" class="btn btn-lg btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#chatbotModal" style="position: fixed; bottom: 20px; right: 20px;z-index: 9999">
     <i class="bi bi-chat-dots-fill"></i> <span class="mx-2">Chat</span>
   </button>
 
@@ -83,7 +83,7 @@
   </div>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" style="position: fixed; bottom: 20px; left: 20px;z-index: 9999">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
@@ -107,12 +107,26 @@
         messageContainer.innerText = message;
         document.getElementById('chatbotMessages').appendChild(messageContainer);
         document.getElementById('chatbotInput').value = '';
-
-        // Placeholder response from bot
-        const botResponse = document.createElement('div');
-        botResponse.className = 'alert alert-secondary bot-message';
-        botResponse.innerText = 'This is a bot response.';
-        document.getElementById('chatbotMessages').appendChild(botResponse);
+        fetch('https://stunting.nexteam.id/predict', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ pattern: message })
+        })
+        .then(response => response.json())
+        .then(data => {
+          const botResponse = document.createElement('div');
+          botResponse.className = 'alert alert-secondary bot-message';
+          botResponse.innerText = data.answer || 'I am not sure how to respond to that.';
+          document.getElementById('chatbotMessages').appendChild(botResponse);
+        })
+        .catch(error => {
+          const errorMessage = document.createElement('div');
+          errorMessage.className = 'alert alert-danger bot-message';
+          errorMessage.innerText = 'Oops! Something went wrong. Please try again later.';
+          document.getElementById('chatbotMessages').appendChild(errorMessage);
+        });
       }
     };
   </script>
