@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Anak;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AnakController extends Controller
 {
@@ -46,6 +47,30 @@ class AnakController extends Controller
     public function detail($id){
     $anak = Anak::where('id' , $id)->with('cf' , 'cf.gejalas' ,'orangtua' , 'cf.gejalas.gejala')->first();
         return view("user.show" , compact('anak'));
+    }
+    public function edit($id ){
+        $anak = Anak::where('id' , $id)->first();
+        return view('user.anak.edit' ,compact('anak') );
+    }
+
+    public function update(Request $request, $id){
+        Anak::where('id' , $id)->update([
+            'nik' => $request->nik,
+            'name' => $request->name,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'jk' => $request->jk,
+            'nohp_orangtua' => $request->nohp_orangtua,
+            'tinggi' => $request->tinggi,
+            'berat' => $request->berat,
+        ]);
+        Alert::success('success','berhasil update data anak');
+        return redirect()->route('anak.index')->with('success','');
+    }
+
+    public function destroy($id){
+        Anak::where('id', $id)->delete();
+        Alert::success('success','berhasil menghapus data anak');
+        return redirect()->route('anak.index')->with('success','');
     }
 
 }

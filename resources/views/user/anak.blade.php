@@ -18,6 +18,8 @@
                     <div class="mt-3">
                         <a href="{{ route('periksa.anak', ['id'=>$item->id]) }}" class="btn btn-primary">Konsultasi Stunting</a>
                         <a href="{{ route('anak.show', ['id'=>$item->id]) }}" class="btn btn-outline-success">Lihat History Konsultasi</a>
+                        <a href="{{ route('anak.edit', ['id'=>$item->id]) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('anak.destroy', ['id'=>$item->id]) }}" class="btn btn-danger">Hapus</a>
                     </div>
                 </div>
             </div>
