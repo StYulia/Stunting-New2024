@@ -5,7 +5,7 @@
     <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-            <h2>Selamat Datang di Website Stunting</h2>
+            <h2>Selamat Datang di Website SiTumbas</h2>
          
         </div><!-- End Welcome -->
         <div class="content row gy-4">

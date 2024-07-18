@@ -80,7 +80,7 @@ class AuthController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('login')->with('success','success logout');
+        return redirect()->route('home')->with('success','success logout');
     }
 
 }
