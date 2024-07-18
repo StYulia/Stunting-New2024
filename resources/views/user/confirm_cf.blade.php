@@ -4,23 +4,30 @@
 <div class="container mt-5">
     <div class="card">
         <div class="card-header">
-            <h1 class="text-center">Konfirmasi Hasil Deteksi</h1>
+            <h1 class="text-center">Konfirmasi Hasil Konsultasi</h1>
         </div>
         <div class="card-body">
-            <p class="text-center">Nilai Kepercayaan: <strong>{{ $cfCombine *100 }} %</strong> Dari : <strong>100%</strong></p>
+            <h4 class="text-center">Hasil deteksi anak anda: <strong>{{ $cfCombine * 100 }}%</strong></h4>
+            <p class="text-center"> Berdasarkan hasil deteksi anak anda dikatakan:
+                <strong class="h5">
+                    @if ($cfCombine <= 0.6)
+                    Normal
+                    @elseif ($cfCombine <= 0.79)
+                    Kemungkinan besar stunting
+                    @else
+                    Stunting
+                    @endif
+                </strong>
+            <form method="POST" action="{{ route('cf.confirm') }}">
+                @csrf
+                <div class="text-center mt-5">
+                    <p class="font-weight-bold">Apakah Anda ingin menyimpan data konsultasi ini?</p>
+                    <button type="submit" name="action" value="commit" class="btn btn-success btn-lg mr-3">Ya</button>
+                    <button type="submit" name="action" value="rollback" class="btn btn-danger btn-lg">Tidak</button>
+                </div>
 
-            <div class="d-flex justify-content-center gap-1">
-                <h3>Simpan data deteksi? </h3>
-                <form method="POST" action="{{ route('cf.confirm') }}" class="d-inline">
-                    @csrf
-                    <div class="text-center">
-                        <button type="submit" name="action" value="commit" class="btn btn-success mr-2">Ya</button>
-                        <button type="submit" name="action" value="rollback" class="btn btn-danger">Tidak</button>
-                    </div>
-                </form>
-            </div>
-            
+            </form>
         </div>
-    </div>
+</div>
 </div>
 @endsection

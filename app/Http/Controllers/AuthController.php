@@ -34,7 +34,7 @@ class AuthController extends Controller
                 return redirect()->route('index')->with('success' , 'success login');
             }
         } else {
-            return redirect()->back()->withErrors('ops please check your credentials');
+            return redirect()->back()->withErrors('email atau password anda salah');
         }
     }
 

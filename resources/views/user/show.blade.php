@@ -104,16 +104,24 @@
                         <thead>
                             <tr>
                                 <th>Pemeriksaan Ke</th>
-                                <th>Nama Penyakit</th>
-                                <th>Tingkat Kepercayaan</th>
+                                <th>Tingkat Kepercayaan Hasil Deteksi</th>
+                                <th>Keterangan</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($anak->cf as $item)
                                 <tr>
                                     <td>Pemeriksaan ke {{ $loop->iteration }}</td>
-                                    <td>Stunting</td>
                                     <td>{{ $item->cf * 100 }} %</td>
+                                    <td>
+                                        @if ($item->cf <= 0.6)
+                                            Normal
+                                        @elseif ($item->cf <= 0.79)
+                                            Kemungkinan besar stunting
+                                        @else
+                                            Stunting
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

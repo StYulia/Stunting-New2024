@@ -12,8 +12,9 @@
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
                     <h3>Mengapa Memilih Website Ini?</h3>
-                    <p>solusi cerdas untuk mendeteksi dan mencegah stunting pada anak. Aplikasi ini dirancang untuk membantu orang tua dalam mengidentifikasi risiko stunting sejak dini melalui analisis cerdas dan penilaian kesehatan yang komprehensif. Dilengkapi dengan fitur chatbot interaktif, aplikasi kami memberikan informasi, saran, dan panduan praktis tentang pencegahan stunting secara mudah dan efisien. Bersama-sama, kita bisa memastikan anak-anak tumbuh sehat dan mencapai potensi maksimal mereka dengan mengurangi angka stunting di Indonesia
+                    <p>Solusi cerdas untuk mendeteksi dan mencegah stunting pada anak. Aplikasi ini dirancang untuk membantu orang tua dalam mengidentifikasi risiko stunting sejak dini melalui analisis cerdas dan penilaian kesehatan yang komprehensif. Dilengkapi dengan fitur chatbot interaktif, aplikasi kami memberikan informasi, saran, dan panduan praktis tentang pencegahan stunting secara mudah dan efisien. Bersama-sama, kita bisa memastikan anak-anak tumbuh sehat dan mencapai potensi maksimal mereka dengan mengurangi angka stunting di Indonesia
                     </p>
+                    <h5 class="text-center text-white">Ayo Lakukan konsultasi stunting anak anda sekarang!!</h5>
                     <div class="text-center">
                         <a href="/#appointment" class="more-btn"><span>Konsultasi Stunting</span></a>
                     </div>

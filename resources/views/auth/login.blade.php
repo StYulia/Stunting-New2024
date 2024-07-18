@@ -24,7 +24,7 @@
                         required
                         autofocus>
                     <div class="invalid-feedback">
-                        Please fill in your email
+                        Masukkan alamat email anda
                     </div>
                 </div>
 
@@ -42,11 +42,11 @@
                         tabindex="2"
                         required>
                     <div class="invalid-feedback">
-                        please fill in your password
+                        Masukkan password anda
                     </div>
                 </div>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox"
                             name="remember"
@@ -56,7 +56,7 @@
                         <label class="custom-control-label"
                             for="remember-me">Remember Me</label>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="form-group">
                     <button type="submit"
@@ -69,7 +69,7 @@
         </div>
     </div>
     <div class="text-muted mt-5 text-center">
-        Don't have an account? <a href="{{ route('register') }}">Create One</a>
+        Belum memiliki akun? <a href="{{ route('register') }}">buat akun</a>
     </div>
 @endsection
 

@@ -76,11 +76,11 @@ class CfController extends Controller
         $anakId = session('anakId');
 
         if ($request->input('action') == 'commit') {
-            Alert::success('Hasil stunting disimpan');
+            Alert::success('Hasil pemeriksaan disimpan');
             return redirect()->route('anak.show', ['id' => $anakId]);
         } else {
             CfUser::where('id' , $cfDataId)->delete();
-            Alert::info('Hasil stunting tidak disimpan');
+            Alert::info('Hasil pemeriksaan tidak disimpan');
             return redirect()->route('anak.show', ['id' => $anakId])->withErrors('Pemeriksaan stunting dibatalkan');
         }
     }

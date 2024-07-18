@@ -16,7 +16,7 @@
                     <a href="{{ route('anak.index') }}" class="stretched-link">
                         <h3>Konsultasi Kesehatan</h3>
                     </a>
-                    <p>Kami menawarkan konsultasi kesehatan dengan dokter spesialis untuk membantu mengidentifikasi dan menangani masalah stunting pada anak.</p>
+                    <p>Kami menawarkan layanan konsultasi yang dirancang khusus untuk membantu mengidentifikasi diagnosa stunting pada anak.</p>
                 </div>
             </div><!-- End Service Item -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -39,7 +39,7 @@
                     <a href="{{ route('anak.index') }}" class="stretched-link">
                         <h3>History Konsultasi</h3>
                     </a>
-                    <p>Kami mengadakan berbagai program edukasi untuk meningkatkan kesadaran masyarakat mengenai pentingnya pencegahan stunting.</p>
+                    <p>Kami menawarkan layanan untuk melihat riwayat konsultasi dalam diagnosis stunting untuk memantau perkembangan diagnosa pada anak.</p>
                 </div>
             </div><!-- End Service Item -->
         </div>

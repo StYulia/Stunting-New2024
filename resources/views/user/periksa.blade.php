@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-title">
-                <p class="text-center">Pilih Gejala sesuai dengan kondisi anak saat in</p>
+                <h4 class="text-center">Pilih Gejala sesuai dengan kondisi anak saat ini</h4>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -18,7 +18,7 @@
                                         <td>{{$item->name}}</td>
                                         <td>
                                             <select name="gejala[]" id="" class="form-control">
-                                                <option value="0" selected>Tidak Tahu</option>
+                                                <option value="0" selected>Tidak</option>
                                                 <option value="0.2" >Hampir Mungkin</option>
                                                 <option value="0.4" >Mungkin</option>
                                                 <option value="0.6" >Kemungkinan Besar</option>

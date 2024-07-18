@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Stunting - Ayo periksakan kesehatan anakmu</title>
+    <title>SiTumbas - Sistem Tumbuh Bebas Stunting</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- Favicons -->
