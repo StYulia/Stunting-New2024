@@ -17,7 +17,7 @@
             </div>
 
             <div class="section-body">
-                <h2 class="section-title">Selamat datang {{auth()->user()->name}}</h2>
+                <h2 class="section-title">Selamat datang {{ auth()->user()->name }}</h2>
 
                 <div class="card">
                     <div class="card-header">
@@ -33,37 +33,42 @@
             </div>
         </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const labels = {!! json_encode($stuntingCounts->pluck('name')) !!};
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'Jumlah Kasus Stunting',
-                data: {!! json_encode($stuntingCounts->pluck('stunting_count')) !!},
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        };
 
-        const config = {
-            type: 'bar',
-            data: data,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+    @push('scripts')
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const labels = {!! json_encode($stuntingCounts->pluck('village_name')) !!};
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Jumlah Kasus Stunting',
+                    data: {!! json_encode($stuntingCounts->pluck('stunting_count')) !!},
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
                     }
                 }
-            }
-        };
+            };
 
-        const stuntingChart = new Chart(
-            document.getElementById('stuntingChart'),
-            config
-        );
-    });
-</script>
+            const stuntingChart = new Chart(
+                document.getElementById('stuntingChart'),
+                config
+            );
+        });
+    </script>
+    @endpush
 @endsection
+
+

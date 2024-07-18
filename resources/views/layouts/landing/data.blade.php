@@ -11,20 +11,24 @@
             @csrf
             <div class="row">
                 <div class="col-md-4 form-group">
+                    <label for="">Nik / No KK</label>
                     <input type="text" name="nik" class="form-control" id="nik"
                         placeholder="NIK Anak / No KK" required="">
                 </div>
                 <div class="col-md-4 form-group mt-3 mt-md-0">
+                    <label for="">Nama Anak</label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Nama Anak"
                         required="">
                 </div>
                 <div class="col-md-4 form-group mt-3 mt-md-0">
+                    <label for="">Tanggal Lahir</label>
                     <input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir"
                         placeholder="Tanggal Lahir Anak" required="">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 form-group mt-3">
+                    <label for="">Pilih Jenis Kelamin</label>
                     <select name="jk" id="jenis_kelamin" class="form-select" required="">
                         <option value="">Jenis Kelamin Anak</option>
                         <option value="Laki-laki">Laki-laki</option>
@@ -32,16 +36,19 @@
                     </select>
                 </div>
                 <div class="col-md-4 form-group mt-3">
+                    <label for="">No Hp Orang Tua</label>
                     <input type="tel" class="form-control" name="nohp_orangtua" id="telepon_orang_tua"
                         placeholder="Nomor Telepon Orang Tua" required="">
                 </div>
                 <div class="col-md-4 form-group mt-3">
+                    <label for="">Tinggi Badan (CM)</label>
                     <input type="number" name="tinggi" class="form-control" id="tinggi_badan"
                         placeholder="Tinggi Badan Anak (cm)" required="">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group mt-3">
+                    <label for="">Berat Badan (kg)</label>
                     <input type="number" name="berat" class="form-control" id="berat_badan"
                         placeholder="Berat Badan Anak (kg)" required="">
                 </div>

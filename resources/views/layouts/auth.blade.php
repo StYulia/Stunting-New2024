@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
         name="viewport">
-    <title>@yield('title') &mdash; Stisla</title>
+    <title>@yield('title') &mdash; SiTumbas Login</title>
+  <link rel="icon" type="image/x-icon" href="/logo_ico.ico">
+
 
     <!-- General CSS Files -->
     <link rel="stylesheet"

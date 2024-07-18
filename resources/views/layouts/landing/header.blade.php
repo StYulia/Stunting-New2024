@@ -6,12 +6,12 @@
             <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="{{ asset('landing/') }}/assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">Stunting</h1>
+                <h1 class="sitename">SiTumbas</h1>
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="{{ route('home') }}" class="{{ Request::routeIs('home') ? 'active' : '' }}">Home</a></li>
-                    <li><a href="/#about" class="{{ Request::is('#about') ? 'active' : '' }}">About</a></li>
+                    {{-- <li><a href="/#about" class="{{ Request::is('#about') ? 'active' : '' }}">About</a></li> --}}
                     <li><a href="/#services" class="{{ Request::is('#services') ? 'active' : '' }}">Layanan</a></li>
                     <li><a href="/#appointment" class="{{ Request::is('#appointment') ? 'active' : '' }}">Tambah Data Anak</a></li>
                     @auth

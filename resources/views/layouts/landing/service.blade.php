@@ -7,9 +7,7 @@
     </div><!-- End Section Title -->
 
     <div class="container">
-
         <div class="row gy-4">
-
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-item position-relative">
                     <div class="icon">
@@ -21,7 +19,6 @@
                     <p>Kami menawarkan konsultasi kesehatan dengan dokter spesialis untuk membantu mengidentifikasi dan menangani masalah stunting pada anak.</p>
                 </div>
             </div><!-- End Service Item -->
-
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-item position-relative">
                     <div class="icon">
