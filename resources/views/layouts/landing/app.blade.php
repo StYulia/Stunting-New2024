@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Stunting - Ayo periksakan kesehatan anakmu</title>
+    <title>SiTumbas - Ayo periksakan kesehatan anakmu</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- Favicons -->
@@ -70,15 +70,14 @@
 
     <!-- Chatbot Modal -->
     <div class="modal fade" id="chatbotModal" tabindex="-1" aria-labelledby="chatbotModalLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-scrollable" style="max-height: 90vh;">
-            <div class="modal-content">
+        <div class="modal-dialog modal-lg modal-dialog-centered" style="max-height: 90vh; max-width: 80vw;">
+            <div class="modal-content" style="height: 95vh; border-radius: 0;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="chatbotModalLabel">Chatbot</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div id="chatbotMessages" class="chatbot-messages mb-3"
-                        style="max-height: calc(90vh - 130px); overflow-y: auto;">
+                <div class="modal-body" style="display: flex; flex-direction: column; height: calc(100vh - 56px);">
+                    <div id="chatbotMessages" class="chatbot-messages mb-3" style="flex: 1; overflow-y: auto;">
                         <!-- Chat messages will appear here -->
                     </div>
                     <div class="input-group">
@@ -89,6 +88,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -121,10 +121,11 @@
                 setTimeout(() => {
                     messageContainer.remove();
                 }, 60000 * 15);
-                
-                const greetings = ["Hi", "Halo", "Permisi", "Tanya dong", "Selamat Pagi", "Pagi", "Hai Chatbot",  "Selamat Malam", "Malam", "Siang", "Selamat Siang", "Sore", "Selamat Sore", "Boleh nanya"
+
+                const greetings = ["Hi", "Halo", "Permisi", "Tanya dong", "Selamat Pagi", "Pagi", "Hai Chatbot",
+                    "Selamat Malam", "Malam", "Siang", "Selamat Siang", "Sore", "Selamat Sore", "Boleh nanya"
                 ];
-          
+
                 const isGreeting = greetings.some(greeting => message.toLowerCase().includes(greeting.toLowerCase()));
 
                 if (isGreeting) {
