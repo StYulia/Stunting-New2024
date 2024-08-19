@@ -15,7 +15,7 @@ class CfController extends Controller
     //
     public function konsultasi($id)
     {
-        $gejalas = Gejala::all();
+        $gejalas = Gejala::notArchived()->get();
         $anak = Anak::where('id', $id)->first();
         return view('user.periksa', compact('gejalas', 'anak'));
     }

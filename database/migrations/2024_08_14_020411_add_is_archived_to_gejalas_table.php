@@ -11,24 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gejalas', function (Blueprint $table) {
-            // $table->id();
-            // $table->string('name');
-            // $table->string('kode');
-            // $table->double('bobot');
-            $table->boolean('is_archived')->default(false)->after('bobot');
-            // $table->timestamps();
+        Schema::table('gejalas', function (Blueprint $table) {
+            //
         });
     }
 
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('gejalas', function (Blueprint $table) {
-            $table->dropColumn('is_archived');
+            //
         });
     }
 };
-

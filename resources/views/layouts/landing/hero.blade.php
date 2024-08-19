@@ -11,8 +11,9 @@
         <div class="content row gy-4">
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-                    <h3>Mengapa Memilih Website Ini?</h3>
-                    <p>Solusi cerdas untuk mendeteksi dan mencegah stunting pada anak. Aplikasi ini dirancang untuk membantu orang tua dalam mengidentifikasi risiko stunting sejak dini melalui analisis cerdas dan penilaian kesehatan yang komprehensif. Dilengkapi dengan fitur chatbot interaktif, aplikasi kami memberikan informasi, saran, dan panduan praktis tentang pencegahan stunting secara mudah dan efisien. Bersama-sama, kita bisa memastikan anak-anak tumbuh sehat dan mencapai potensi maksimal mereka dengan mengurangi angka stunting di Indonesia
+                    <h3>Sistem Tumbuh Bebas Stunting</h3>
+                    <p>Stunting tidak bisa diobati, namun dapat dicegah. Website ini dirancang sebagai solusi cerdas untuk membantu orang tua dalam mendeteksi dan mencegah stunting pada anak sejak dini. Melalui analisis cerdas dan penilaian kesehatan yang komprehensif, kami menyediakan alat yang efektif untuk mengenali risiko stunting pada anak anda sebelum terjadi. Selain itu aplikasi inin dilengkapi dengan fitur chatbot interaktif, website ini memberikan informasi, saran, dan panduan praktis untuk pencegahan stunting secara mudah dan efisien. Mari bersama-sama mencegah stunting dan memastikan anak-anak tumbuh sehat, mencapai potensi maksimal mereka, dan mengurangi angka stunting di Indonesia.
+
                     </p>
                     <h5 class="text-center text-white">Ayo Lakukan konsultasi stunting anak anda sekarang!!</h5>
                     <div class="text-center">

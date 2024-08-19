@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-title">
-                <h4 class="text-center">Pilih Gejala sesuai dengan kondisi anak saat ini</h4>
+                <h4 class="text-center">Pilih indikator dan isi nilai sesuai dengan kondisi anak saat ini</h4>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -13,9 +13,18 @@
                         <table class="table table-bordered">
                             <tbody>
                                 @foreach ($gejalas as $item)
-                                    <tr>
-                                        <td>{{$item->kode}}</td>
-                                        <td>{{$item->name}}</td>
+                                <tr>
+                                    <td>{{$item->kode}}</td>
+                                    <td>
+                                        {{$item->name}}
+                                        @if ($item->name === 'Apakah tinggi badan anak Anda masih di bawah rata-rata dibandingkan anak seusianya?')
+                                            <br>
+                                            <a href="https://www.alodokter.com/tinggi-badan-anak-yang-ideal-dan-cara-memaksimalkan-pertumbuhannya" target="_blank">Lihat tinggi badan ideal anak disini!</a>
+                                        @elseif ($item->name === 'Apakah kondisi wajah anak Anda saat ini tampak lebih kecil dengan kondisi kulit lebih tipis dan halus?')
+                                            <br>
+                                            <a href="https://morinaga.id/id/milestone/memahami-ukuran-lingkar-kepala-anak-usia-0-10-tahun" target="_blank">Lihat lingkar kepala normal disini!</a>
+                                        @endif
+                                    </td>
                                         <td>
                                             <select name="gejala[]" id="" class="form-control">
                                                 <option value="0" selected>Tidak</option>

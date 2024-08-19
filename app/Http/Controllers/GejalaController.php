@@ -10,9 +10,13 @@ class GejalaController extends Controller
     //
     public function index()
     {
+        // Menggunakan scope untuk menampilkan hanya data yang belum diarsipkan
         $gejalas = Gejala::paginate(10);
+        
         return view('admin.gejala.index', compact('gejalas'));
     }
+    
+    
 
     /**
      * Show the form for creating a new resource.
@@ -73,10 +77,43 @@ class GejalaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Gejala $gejala)
-    {
-        $gejala->delete();
+    // public function destroy(Gejala $gejala)
+    // {
+    //     $gejala->delete();
 
-        return redirect()->route('gejala.index')->with('success', 'Gejala deleted successfully');
+    //     return redirect()->route('gejala.index')->with('success', 'Gejala deleted successfully');
+    // }
+
+    // public function archiveIndex()
+    // {
+    //     dd('Archive Index called');
+    //     // Mengambil data yang diarsipkan
+    //     $gejalas = Gejala::where('is_archived', true)->paginate(10);
+        
+    //     return view('admin.gejala.archive', compact('gejalas'));
+    // }
+
+    public function archive($id)
+    {
+        $gejala = Gejala::find($id);
+        if ($gejala) {
+            $gejala->is_archived = true;
+            $gejala->save();
+            return redirect()->route('gejala.index')->with('success', 'Gejala berhasil diarsipkan.');
+        }
+        return redirect()->route('gejala.index')->with('error', 'Gejala tidak ditemukan.');
     }
+    
+    public function unarchive($id)
+    {
+        $gejala = Gejala::find($id);
+        if ($gejala) {
+            $gejala->is_archived = false;
+            $gejala->save();
+            return redirect()->route('gejala.index')->with('success', 'Gejala berhasil ditampilkan kembali.');
+        }
+        return redirect()->route('gejala.index')->with('error', 'Gejala tidak ditemukan.');
+    }
+    
+
 }

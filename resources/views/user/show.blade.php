@@ -53,7 +53,7 @@
                         </tr>
                         <tr>
                             <td>
-                                BB/PB
+                                Status Gizi (BMI)
                             </td>
                             <td>
                                 {{ $anak->getKategoriBmiAttribute() }}
@@ -104,6 +104,7 @@
                         <thead>
                             <tr>
                                 <th>Pemeriksaan Ke</th>
+                                <th>Tanggal Pemeriksaan</th>
                                 <th>Tingkat Kepercayaan Hasil Deteksi</th>
                                 <th>Keterangan</th>
                             </tr>
@@ -112,6 +113,8 @@
                             @foreach ($anak->cf as $item)
                                 <tr>
                                     <td>Pemeriksaan ke {{ $loop->iteration }}</td>
+                                    <td>{{ $item->created_at->format('d-m-Y') }}</td> <!-- Menampilkan tanggal dan waktu pemeriksaan -->
+                                  
                                     <td>{{ $item->cf * 100 }} %</td>
                                     <td>
                                         @if ($item->cf <= 0.6)

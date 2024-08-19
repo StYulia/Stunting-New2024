@@ -111,17 +111,28 @@ svg{
                                             <td>{{ $gejala->kode }}</td>
                                             <td>{{ $gejala->bobot }}</td>
                                             <td>
-                                                <form action="{{ route('gejala.destroy', $gejala->id) }}" method="POST">
+                                                @if ($gejala->is_archived)
+                                                    <!-- Jika gejala diarsipkan, tampilkan tombol Tampilkan -->
+                                                    <form action="{{ route('gejala.unarchive', $gejala->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <button type="submit" class="btn btn-success">Tampilkan</button>
+                                                    </form>
+                                                @else
+                                                    <!-- Jika gejala tidak diarsipkan, tampilkan Show, Edit, dan Archive -->
                                                     <a href="{{ route('gejala.show', $gejala->id) }}" class="btn btn-info">Show</a>
                                                     <a href="{{ route('gejala.edit', $gejala->id) }}" class="btn btn-primary">Edit</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
+                                                    <form action="{{ route('gejala.archive', $gejala->id) }}" method="POST" style="display:inline;">
+                                                        @csrf
+                                                        @method('PATCH')
+                                                        <button type="submit" class="btn btn-danger">Archive</button>
+                                                    </form>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
+                                
                             </table>
                         </div>
                         {{ $gejalas->links() }}

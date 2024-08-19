@@ -27,7 +27,7 @@
                     <button  class="btn btn" type="button" data-bs-toggle="modal" data-bs-target="#chatbotModal">
                         <h3>Chatbot Interaktif</h3>
                     </button>
-                    <p>Kami menyediakan informasi mengenai suplemen yang dapat membantu dalam pencegahan dan penanganan stunting.</p>
+                    <p>Kami menyediakan layanan interaktif chatbot yang dapat membantu anda untuk meningkatkan informasi dan pengetahuan terkait pencegahan stunting.</p>
                 </div>
             </div><!-- End Service Item -->
 

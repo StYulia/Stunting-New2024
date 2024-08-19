@@ -24,6 +24,11 @@
                         <h4>Stunting Anak Berdasarkan Desa</h4>
                     </div>
                     <div class="card-body">
+                        @php
+                            $currentDate = \Carbon\Carbon::now();
+                            $twoMonthsAgo = $currentDate->copy()->subMonths(2);
+                        @endphp
+                        <p> Periode: {{ $twoMonthsAgo->format('d M Y') }} - {{ $currentDate->format('d M Y') }}</p>
                         <canvas id="stuntingChart" width="400" height="200"></canvas>
                     </div>
                     <div class="card-footer bg-whitesmoke">
@@ -35,7 +40,6 @@
     </div>
 
     @push('scripts')
-   
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const labels = {!! json_encode($stuntingCounts->pluck('village_name')) !!};
@@ -70,5 +74,3 @@
     </script>
     @endpush
 @endsection
-
-
